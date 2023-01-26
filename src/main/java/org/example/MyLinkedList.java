@@ -39,6 +39,9 @@ public class MyLinkedList<T> {
     }
 
     private Node get(int index) {
+        if(index < 0 || index > size){
+            throw new IndexOutOfBoundsException("Index '" + index + "' is out of bounds.");
+        }
         Node current = first;
         for (int i = 0; i < index; i++) {
             current = current.next;

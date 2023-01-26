@@ -39,7 +39,7 @@ public class MyStack<T> {
         return values.length;
     }
 
-    public int length(){
+    public int size(){
         return valuesCnt;
     }
 
@@ -48,6 +48,9 @@ public class MyStack<T> {
     }
 
     public void remove(int index){
+        if(index < 0 || index > values.length){
+            throw new IndexOutOfBoundsException("Index '" + index + "' is out of bounds.");
+        }
         for (int i = index; i < values.length-1; i++) {
             values[i] = values[i+1];
         }

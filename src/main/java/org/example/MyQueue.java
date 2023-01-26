@@ -39,7 +39,7 @@ public class MyQueue<T> {
         return values.length;
     }
 
-    public int length(){
+    public int size(){
         return valuesCnt;
     }
 
